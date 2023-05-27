@@ -1,131 +1,161 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
+
 body{
-    font-family: Times, serif;
-    color: white;
-    background-color: black;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #F4F2F2;
+    overflow: hidden;
 }
-.container{
-    max-width: 90rem;
-    margin: 2rem auto;
-    padding: 0px 2rem;
+
+/* custom css variables */
+:root{
+    --light-black : #818286;
+    --black : #2C2E38;
+    --white : #FFFFFF;
+    --white-smoke : #F9F9F9;
+    --gray  : #f6f6f6f7;
 }
-.header{
-    padding: 2rem;
-    margin: 1rem 0px;
+
+body.dark{
+    --light-black : #E0E3EA;
+    ---black : #FBFBFC;
+    --white : #22252D;
+    --white-smoke : #2A2D37;
+    --gray : #22252C;
+    --sky-blue :#67e6d5;
+    --tomato :  #d46d74;
+}
+
+#calculator-area{
+    width: 300px;
+    height: 550px;
+    margin: 50px auto;
+    background-color: var(--white);
+    border-radius: 15px;
+    position: relative;
+}
+
+.calculator .theme-icon{
+    position: absolute;
+    top: 5px;
+    left: calc(50% - 35px);
     text-align: center;
-}
-.header > .title{
-    margin-bottom: 1rem;
-    font-size: 70px;
-}
-.tribute{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    max-width: 78rem;
-    margin: 0px auto;
-    background: white;
-    color: black;
-    align-items: center;
-    padding: 0px 0px 0px 1rem;
-}
-
-.tribute blockquote{
-    text-align: center;
-    font-size: 3rem;
-}
-.tribute img{
-    max-width: 100%;
-}
-
-.bio{
-    margin: 2rem auto;
-    padding: 0px 0.5rem;
-}
-
-.bio > h2{
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: rgb(1, 66, 166);
-}
-
-.bio > p{
-    font-size: 1.2rem;
-    line-height: 1.4;
-    text-align: center;
-}
-
-.bio > br{
-    margin-top: 2rem;
-}
-
-.awards{
-    margin: 2rem auto;
-    padding: 0px 0.5rem;
-}
-
-.awards > h2{
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: rgb(1, 66, 166);
-}
-
-.awards > p{
-    font-size: 1.2rem;
-    line-height: 1.4;
-    align-items: center;
-}
-
-.awards > br{
-    margin-top: 2rem;
-}
-
-.slide{
-    font-size: 2rem;
-    line-height: 1.7;
-    color: violet;
-}
-
-.page{
-    font-size: 2rem;
-    line-height: 1.5;
-    text-align: center;
-}
-.responsive{
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-.fa{
-    padding: 10px;
-    font-size: 30px;
+    margin: 25px auto;
+    background-color: var(--white-smoke);
     width: 70px;
-    text-align: center;
-    text-decoration: none;
+    display: grid;
+    padding: 5px 5px;
+    align-items: center;
+    border-radius: 15px;
+    grid-template-columns: repeat(2, 1fr);
 }
-.fa:hover{
-    opacity: 0.7;
+
+.calculator .theme-icon i{
+    cursor: pointer;
+    color: var(--tomato);
 }
-.fa-twitter{
-    background: #55ACEE;
-    color: white;
+.calculator .theme-icon i:hover{
+    cursor: pointer;
+    color: var(--sky-blue);
 }
-.fa-linkedin{
-    background-color: white;
-    color: rgb(51, 51, 181);
+
+.calculator .result{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: right;
+    padding: 25px 25px;
 }
-.fa-envelope{
-    background-color: white;
-    color: black;
+
+.calculator .result .history #history-value{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--tomato);
+}
+
+#output-value{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--tomato);
+}
+
+.calculator .keyboard{
+    height: 330px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    align-items: center;
+    justify-items: center;
+    padding: 20px 15px;
+    background: var(--white-smoke);
+    border-radius: 15px;
+}
+
+.calculator .keyboard button{
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--black);
+    font-weight: bold;
+    font-size:  20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.calculator .keyboard button:active{
+    transform: scale(0.5);
+}
+
+.calculator .keyboard button.empty{
+    background: transparent;
+    pointer-events: none;
+}
+
+.calculator .keyboard button:first-child,
+.keyboard .button:nth-child(2),
+.keyboard .button:nth-child(3){
+    color: #67e6d5;
+}
+
+.calculator .keyboard button:nth-child(2),
+.calculator .keyboard .button:last-child{
+    color: #67e6d5;
+}
+
+.calculator .keyboard button:nth-child(4),
+.calculator .keyboard .button:last-child{
+    color: #d46d74;
+}
+.calculator .keyboard button:nth-child(3),
+.calculator .keyboard .button:last-child{
+    color: #d46d74;
+}
+.calculator .keyboard button:nth-child(8),
+.calculator .keyboard .button:last-child{
+    color: #d46d74;
+}
+.calculator .keyboard button:nth-child(12),
+.calculator .keyboard .button:last-child{
+    color: #d46d74;
+}
+.calculator .keyboard button:nth-child(16),
+.calculator .keyboard .button:last-child{
+    color: #d46d74;
+}
+.calculator .keyboard button:nth-child(18),
+.calculator .keyboard .button:last-child{
+    color: #d46d74;
+}
+.calculator .keyboard button:nth-child(20),
+.calculator .keyboard .button:last-child{
+    color: #d46d74;
 }
