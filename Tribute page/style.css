@@ -6,7 +6,7 @@
 body{
     font-family: Times, serif;
     color: white;
-    background-color: black;
+    background-color: rgb(190, 97, 61);
 }
 .container{
     max-width: 90rem;
@@ -21,6 +21,7 @@ body{
 .header > .title{
     margin-bottom: 1rem;
     font-size: 70px;
+    color : black;
 }
 .tribute{
     display: grid;
@@ -50,6 +51,7 @@ body{
     margin-bottom: 1rem;
     font-size: 3rem;
     line-height: 1.2;
+    color : black;
     text-align: center;
     text-decoration: underline;
     text-decoration-color: rgb(1, 66, 166);
@@ -74,6 +76,7 @@ body{
     margin-bottom: 1rem;
     font-size: 3rem;
     line-height: 1.2;
+    color : black;
     text-align: center;
     text-decoration: underline;
     text-decoration-color: rgb(1, 66, 166);
@@ -92,7 +95,7 @@ body{
 .slide{
     font-size: 2rem;
     line-height: 1.7;
-    color: violet;
+    color: black;
 }
 
 .page{
