@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Times, serif;
+    color: white;
+    background-color: black;
+}
+.container{
+    max-width: 90rem;
+    margin: 2rem auto;
+    padding: 0px 2rem;
+}
+.header{
+    padding: 2rem;
+    margin: 1rem 0px;
+    text-align: center;
+}
+.header > .title{
+    margin-bottom: 1rem;
+    font-size: 70px;
+}
+.tribute{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 78rem;
+    margin: 0px auto;
+    background: white;
+    color: black;
+    align-items: center;
+    padding: 0px 0px 0px 1rem;
+}
+
+.tribute blockquote{
+    text-align: center;
+    font-size: 3rem;
+}
+.tribute img{
+    max-width: 100%;
+}
+
+.bio{
+    margin: 2rem auto;
+    padding: 0px 0.5rem;
+}
+
+.bio > h2{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(1, 66, 166);
+}
+
+.bio > p{
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.bio > br{
+    margin-top: 2rem;
+}
+
+.awards{
+    margin: 2rem auto;
+    padding: 0px 0.5rem;
+}
+
+.awards > h2{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(1, 66, 166);
+}
+
+.awards > p{
+    font-size: 1.2rem;
+    line-height: 1.4;
+    align-items: center;
+}
+
+.awards > br{
+    margin-top: 2rem;
+}
+
+.slide{
+    font-size: 2rem;
+    line-height: 1.7;
+    color: violet;
+}
+
+.page{
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: center;
+}
+.responsive{
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.fa{
+    padding: 7px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.fa:hover{
+    opacity: 0.7;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.fa-linkedin{
+    background-color: white;
+    color: rgb(51, 51, 181);
+}
+.fa-envelope{
+    background-color: white;
+    color: black;
+}
+
+.footer{
+    text-align: center;
+    font-size: large;
+}
